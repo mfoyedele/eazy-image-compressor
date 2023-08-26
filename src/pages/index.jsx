@@ -10,6 +10,7 @@ function Home() {
                 <h1>Hi {userService.userValue?.firstName}!</h1>
                 <p>You&apos;re logged in with Next.js & JWT!!</p>
                 <p><Link legacyBehavior href="/users">Manage Users</Link></p>
+                <p>Image Compressor</p>
             </div>
         </div>
     );
