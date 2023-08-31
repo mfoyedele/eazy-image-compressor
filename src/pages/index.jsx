@@ -70,8 +70,22 @@ export default function Home() {
     }
   }
 
+const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const todayDay = new Date().getDay();
+const dayInWord = daysOfWeek[todayDay];  
+
+const boldStyle = {
+    fontWeight: "bold",
+  };
+
+  const today = new Date();
+  const day = today.getDate();
+  const month = today.toLocaleString('default', { month: 'long' });
+  const year = today.getFullYear();
+
   return (
     <div className='p-4'>
+      <div className="text-right"><span style={boldStyle}>{dayInWord}, </span>{day} {month} {year} <br /></div>
       <div>
         <h1>Hi {userService.userValue?.firstName}!</h1>
                 <p>Welcome!</p>                         
