@@ -4,12 +4,30 @@ a { cursor: pointer; }
     min-height: 350px;
 }
 
-.comprssedImage {
-    margin: 0 auto;
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 20px;
 }
 
 .inputImage {
     display: flex;
     justify-content: center;
-    padding-top: 40px;
+    padding-top: 20px;
+}
+
+.originalImage {
+    display: flex;
+    justify-content: center;   
+}
+
+.comprssedImage {
+    display: flex;
+    justify-content: center;
+}
+
+.savaButton {
+    display: flex;
+    justify-content: center;  
+    padding-top: 10px;      
 }

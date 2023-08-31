@@ -65,7 +65,7 @@ export default function Home() {
     if (compressedImageURL) {
       const a = document.createElement('a');
       a.href = compressedImageURL;
-      a.download = 'compressed_image.jpg'; // Set the desired filename
+      a.download = 'compressed_image.jpg'; 
       a.click();
     }
   }
@@ -74,12 +74,11 @@ export default function Home() {
     <div className='p-4'>
       <div>
         <h1>Hi {userService.userValue?.firstName}!</h1>
-                <p>Welcome!</p>
-                <p><Link legacyBehavior href="/users">Manage Users</Link></p>          
+                <p>Welcome!</p>                         
           </div>
           
        <div> 
-       <div className='compressedImage'>      
+       <div>      
       <h3 className='text-center'>Image Compressor</h3>
       <div className='inputImage'>
       <input
@@ -90,20 +89,26 @@ export default function Home() {
         />
         </div>
         </div>
-      <div id="container">
+      <div className='container'>
         {originalImageURL && (
             <div>
-            <h4>Original Image</h4>
-            <p>Size: {originalImageSize}</p>
+            <h4 className='text-center'>Original Image</h4>
+            <p className='text-center'>Size: {originalImageSize}</p>
+            <div className='originalImage'>
             <img src={originalImageURL} alt="Original" />
+          </div>
           </div>
         )}
         {compressedImageURL && (
             <div>
-            <h4>Compressed Image</h4>
-            <p>Size: {compressedImageSize}</p>
+            <h4 className='text-center'>Compressed Image</h4>
+            <p className='text-center'>Size: {compressedImageSize}</p>
+            <div className='comprssedImage'>
             <img src={compressedImageURL} alt="Compressed" />
+          </div>
+          <div className='savaButton'>
             <button onClick={handleDownload}>Save As</button>
+          </div>
           </div>
         )}
         </div>
