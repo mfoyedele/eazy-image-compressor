@@ -9,6 +9,8 @@ import { Nav, Alert } from 'components';
 
 export default App;
 
+const year = new Date().getFullYear();
+
 function App({ Component, pageProps }) {
     const router = useRouter();
     const [user, setUser] = useState(null);
@@ -65,6 +67,10 @@ function App({ Component, pageProps }) {
                 {authorized &&
                     <Component {...pageProps} />
                 }
+            </div>
+
+            <div>
+                <p className='text-center'> Copyright ©{year}, OMF Technologies</p>
             </div>
 
         </>
