@@ -78,33 +78,36 @@ export default function Home() {
                 <p><Link legacyBehavior href="/users">Manage Users</Link></p>          
           </div>
           
-          <div>
-              
-      <h3>Image Compressor</h3>
-          </div>
+       <div> 
+       <div className='compressedImage'>      
+      <h3 className='text-center'>Image Compressor</h3>
+      <div className='inputImage'>
       <input
         ref={inputRef}
         type="file"
         accept="image/*"
         onChange={handleImageChange}
-      />
+        />
+        </div>
+        </div>
       <div id="container">
         {originalImageURL && (
-          <div>
+            <div>
             <h4>Original Image</h4>
             <p>Size: {originalImageSize}</p>
             <img src={originalImageURL} alt="Original" />
           </div>
         )}
         {compressedImageURL && (
-          <div>
+            <div>
             <h4>Compressed Image</h4>
             <p>Size: {compressedImageSize}</p>
             <img src={compressedImageURL} alt="Compressed" />
             <button onClick={handleDownload}>Save As</button>
           </div>
         )}
+        </div>
       </div>
-    </div>
+</div>
   );
 }

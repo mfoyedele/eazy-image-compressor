@@ -3,3 +3,13 @@ a { cursor: pointer; }
 .app-container {
     min-height: 350px;
 }
+
+.comprssedImage {
+    margin: 0 auto;
+}
+
+.inputImage {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
