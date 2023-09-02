@@ -88,7 +88,7 @@ const boldStyle = {
       <div className="text-right"><span style={boldStyle}>{dayInWord}, </span>{day} {month} {year} <br /></div>
       <div>
         <h1>Hi {userService.userValue?.firstName}!</h1>
-                <p>Welcome!</p>                         
+        <p>Welcome!</p>          
           </div>
           
        <div> 
@@ -103,7 +103,7 @@ const boldStyle = {
         />
         </div>
         </div>
-      <div className='container'>
+      <div className='maincontainer'>
         {originalImageURL && (
             <div>
             <h4 className='text-center'>Original Image</h4>

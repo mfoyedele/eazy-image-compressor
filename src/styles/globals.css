@@ -1,10 +1,20 @@
-a { cursor: pointer; }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+a {
+    cursor: pointer;
+}
 
 .app-container {
     min-height: 350px;
 }
 
-.container {
+
+.maincontainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-top: 20px;
