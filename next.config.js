@@ -7,7 +7,7 @@ module.exports = {
     },
     publicRuntimeConfig: {
         apiUrl: process.env.NODE_ENV === 'development'
-            ? 'http://localhost:3000/api' // development api
-            : 'http://localhost:3000/api' // production api
+            ? 'https://funso-image-compressor.vercel.app/api' // development api
+            : 'https://funso-image-compressor.vercel.app/api' // production api
     }
 }
