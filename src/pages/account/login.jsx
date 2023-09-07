@@ -84,10 +84,10 @@ function Login() {
                 </div>
                 <div className='container'>
                     <div className='column1'>
-                        <di>
+                        <div>
                             <p className='text-[#2566EB] text-[38px] font-bold'>Compress Images</p>
                             <p className='text-[16px]'>Automatically compress images to minimize file size without <br/>degrading quality to an unacceptable level and speed up your website.</p>
-                        </di>
+                        </div>
       <div className='flex justify-center'>
               <a href='/'>
                 <Image
@@ -97,14 +97,13 @@ function Login() {
               height={600}
               priority
             /></a>
-          </div>              
-               
-                    </div>
+          </div>             
+            </div>
                     <div className='column2'>
                         <div className='md:mx-[100px] sm:mx-[20px]'>
                   <div className='flex '>
         <div className='text-black'>
-        <p className='lg:text-[40px] md:text-[31px] sm:text-[35px] font-bold'>Welcome Back!</p>
+        <p className='lg:text-[40px] md:text-[31px] sm:text-[35px] font-bold text-[#2566EB]'>Welcome Back!</p>
         <p className='text-[14px]'>Please enter your credentials to login.</p>
         </div> 
 </div>

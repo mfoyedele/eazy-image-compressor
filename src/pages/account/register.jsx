@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
-
+import Image from 'next/image';
 import { Link } from 'components';
 import { Layout } from 'components/account';
 import { userService, alertService } from 'services';
@@ -41,7 +41,78 @@ function Register() {
 
     return (
         <Layout>
-            <div className="card">
+            <div className=''>
+                <div className='flex justify-between pt-6 md:mb-[80px] sm:mb-[10px] md:mx-[70px] sm:mx-[20px] text-black'>
+              <div>
+    <Link legacyBehavior href='/'>
+                <a>                
+      <Image
+        src="/images/logo.png"
+        alt="Image compressor logo"
+        width="50"
+        height="56"
+        className='nav-logo'
+        priority
+        style={{
+          width: "70%",
+          height: "auto",      
+        }} 
+        />              
+                </a>
+                </Link>
+              </div>
+              <div>
+                <div className='flex justify-center md:space-x-16 sm:space-x-4 text-[16px] cursor-pointer'>
+                  <Link legacyBehavior href='/'>
+                  <a                   
+                    className="text-black hover:border-[#3AA7E3] px-3 py-2  text-md font-medium"
+                  >
+                      Home
+                  </a>
+              </Link>
+              <Link legacyBehavior href='/about'>
+                  <a                   
+                    className="text-black hover:border-[#3AA7E3] px-3 py-2  text-md font-medium"
+                  >
+                    About
+                  </a>
+              </Link>
+              <Link legacyBehavior href='/account/login'>
+                  <a                   
+                    className="text-black hover:border-[#3AA7E3] px-3 py-2  text-md font-medium"
+                  >
+                    Login
+                  </a>
+              </Link>              
+        </div>
+              </div>
+                </div>
+                <div className='container'>
+                      <div className='column1'>
+                        <div>
+                            <p className='text-[#2566EB] text-[38px] font-bold'>Compress Images</p>
+                            <p className='text-[16px]'>Automatically compress images to minimize file size without <br/>degrading quality to an unacceptable level and speed up your website.</p>
+                        </div>
+      <div className='flex justify-center'>
+              <a href='/'>
+                <Image
+              src="/images/panda.png"
+              alt="logo"
+              width={600}
+              height={600}
+              priority
+            /></a>
+          </div>             
+                    </div>
+                    <div className='column2'>
+                        <div className='md:mx-[100px] sm:mx-[20px]'>
+                            <div className='flex '>
+        <div className='text-black'>
+        <p className='lg:text-[40px] md:text-[31px] sm:text-[35px] font-bold text-[#2566EB]'>Welcome!</p>
+        <p className='text-[14px]'>To sign up, please supply your details below.</p>
+        </div> 
+</div>
+<div className="card">
                 <h4 className="card-header">Register</h4>
                 <div className="card-body">
                     <form onSubmit={handleSubmit(onSubmit)}>
@@ -71,8 +142,23 @@ function Register() {
                         </button>
                         <Link legacyBehavior href="/account/login" className="btn btn-link">Cancel</Link>
                     </form>
-                </div>
+                            </div>
+                            <div>
+                            <p className='py-1 w-full text-center text-black'>
+                Already have an account?
+                <Link href='/account/login'>
+                  <span className='text-[#2566EB] text-[14px] font-bold hover:text-primary px-1'>
+                    Login
+                  </span>
+                </Link>
+              </p>
             </div>
+                        </div>
+                </div>
+                    </div>
+                </div>
+            
+                </div>
         </Layout>
     );
 }
