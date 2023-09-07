@@ -36,7 +36,7 @@ function Login() {
 
     return (
         <Layout>
-            <div className=''>
+            <div className='mb-14'>
             <div className='flex justify-between pt-6 md:mb-[80px] sm:mb-[10px] md:mx-[70px] sm:mx-[20px] text-black'>
               <div>
     <Link legacyBehavior href='/'>
@@ -72,7 +72,7 @@ function Login() {
                     About
                   </a>
               </Link>
-              <Link legacyBehavior href='/register'>
+              <Link legacyBehavior href='/account/register'>
                   <a                   
                     className="text-black hover:border-[#3AA7E3] px-3 py-2  text-md font-medium"
                   >
@@ -84,6 +84,10 @@ function Login() {
                 </div>
                 <div className='container'>
                     <div className='column1'>
+                        <di>
+                            <p className='text-[#2566EB] text-[38px] font-bold'>Compress Images</p>
+                            <p className='text-[16px]'>Automatically compress images to minimize file size without <br/>degrading quality to an unacceptable level and speed up your website.</p>
+                        </di>
       <div className='flex justify-center'>
               <a href='/'>
                 <Image
@@ -122,13 +126,13 @@ function Login() {
                             {formState.isSubmitting && <span className="spinner-border spinner-border-sm mr-1"></span>}
                             Login
                         </button>
-                        <Link legacyBehavior href="/account/register" className="btn btn-link">Register</Link>
+                        
                     </form>
                 </div>
                 <div>
               <p className='py-1 w-full text-center text-black'>
                 Don't have an account?
-                <Link href='/register'>
+                <Link href='/account/register'>
                   <span className='text-[#2566EB] text-[14px] font-bold hover:text-primary px-1'>
                     Register
                   </span>
