@@ -3,8 +3,6 @@
 @tailwind utilities;
 
 
-
-
 a {
     cursor: pointer;
 }
@@ -40,4 +38,30 @@ a {
     display: flex;
     justify-content: center;  
     padding-top: 10px;      
+}
+
+#body {
+    background-color: #061960;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+
+@media screen and (min-width: 280px) and (max-width: 576px) {
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }
