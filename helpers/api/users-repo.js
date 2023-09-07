@@ -1,51 +1,81 @@
-const fs = require('fs');
+import getConfig from 'next/config';
+import jwt from 'jsonwebtoken';
+import bcrypt from 'bcryptjs';
+import { db } from 'helpers/api';
 
-// users in JSON file for simplicity, store in a db for production applications
-let users = require('data/users.json');
+const { serverRuntimeConfig } = getConfig();
+const User = db.User;
 
 export const usersRepo = {
-    getAll: () => users,
-    getById: id => users.find(x => x.id.toString() === id.toString()),
-    find: x => users.find(x),
+    authenticate,
+    getAll,
+    getById,
     create,
     update,
     delete: _delete
 };
 
-function create(user) {
-    // generate new user id
-    user.id = users.length ? Math.max(...users.map(x => x.id)) + 1 : 1;
-
-    // set date created and updated
-    user.dateCreated = new Date().toISOString();
-    user.dateUpdated = new Date().toISOString();
-
-    // add and save user
-    users.push(user);
-    saveData();
-}
-
-function update(id, params) {
-    const user = users.find(x => x.id.toString() === id.toString());
-
-    // set date updated
-    user.dateUpdated = new Date().toISOString();
-
-    // update and save
-    Object.assign(user, params);
-    saveData();
-}
-
-// prefixed with underscore '_' because 'delete' is a reserved word in javascript
-function _delete(id) {
-    // filter out deleted user and save
-    users = users.filter(x => x.id.toString() !== id.toString());
-    saveData();
+async function authenticate({ username, password }) {
+    const user = await User.findOne({ username });
     
+    if (!(user && bcrypt.compareSync(password, user.hash))) {
+        throw 'Username or password is incorrect';
+    }        
+    
+    // create a jwt token that is valid for 7 days
+    const token = jwt.sign({ sub: user.id }, serverRuntimeConfig.secret, { expiresIn: '7d' });
+
+    return {
+        ...user.toJSON(),
+        token
+    };
 }
 
-// private helper functions
+async function getAll() {
+    return await User.find();
+}
 
-function saveData() {
-    fs.writeFileSync('data/users.json', JSON.stringify(users, null, 4));
+async function getById(id) {
+    return await User.findById(id);
+}
+
+async function create(params) {
+    // validate
+    if (await User.findOne({ username: params.username })) {
+        throw 'Username "' + params.username + '" is already taken';
+    }
+
+    const user = new User(params);
+
+    // hash password
+    if (params.password) {
+        user.hash = bcrypt.hashSync(params.password, 10);
+    }
+
+    // save user
+    await user.save();
+}
+
+async function update(id, params) {
+    const user = await User.findById(id);
+
+    // validate
+    if (!user) throw 'User not found';
+    if (user.username !== params.username && await User.findOne({ username: params.username })) {
+        throw 'Username "' + params.username + '" is already taken';
+    }
+
+    // hash password if it was entered
+    if (params.password) {
+        params.hash = bcrypt.hashSync(params.password, 10);
+    }
+
+    // copy params properties to user
+    Object.assign(user, params);
+
+    await user.save();
+}
+
+async function _delete(id) {
+    await User.findByIdAndRemove(id);
 }

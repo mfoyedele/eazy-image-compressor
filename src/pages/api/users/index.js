@@ -1,11 +1,10 @@
-import { apiHandler, usersRepo, omit } from 'helpers/api';
+import { apiHandler, usersRepo } from 'helpers/api';
 
 export default apiHandler({
-    get: getUsers
+    get: getAll
 });
 
-function getUsers(req, res) {
-    // return users without hashed passwords in the response
-    const response = usersRepo.getAll().map(x => omit(x, 'hash'));
-    return res.status(200).json(response);
+async function getAll(req, res) {
+    const users = await usersRepo.getAll();
+    return res.status(200).json(users);
 }
