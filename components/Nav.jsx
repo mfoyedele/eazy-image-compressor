@@ -26,6 +26,7 @@ function Nav() {
                 <NavLink legacyBehavior href="/" exact className="nav-item nav-link">Home</NavLink>
                 <NavLink legacyBehavior href="/users" className="nav-item nav-link">Users</NavLink>
                 <a onClick={logout} className="nav-item nav-link">Logout</a>
+                <p>About</p>
             </div>
         </nav>
     );
