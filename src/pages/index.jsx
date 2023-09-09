@@ -87,8 +87,7 @@ const boldStyle = {
     <div className='p-4'>
       <div className="text-right"><span style={boldStyle}>{dayInWord}, </span>{day} {month} {year} <br /></div>
       <div>
-        <h1>Hi {userService.userValue?.firstName}!</h1>
-        <p>Welcome!</p>          
+        <h1>Welcome {userService.userValue?.firstName}!</h1>                  
           </div>
           
        <div> 

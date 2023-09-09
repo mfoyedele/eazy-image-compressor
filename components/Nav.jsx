@@ -24,7 +24,7 @@ function Nav() {
     
     return (
         <nav className="">
-            <div className='flex justify-between pt-6 md:mb-[80px] sm:mb-[10px] md:mx-[70px] sm:mx-[20px] text-black'>
+            <div className='flex justify-between pt-6 md:mb-[5px] sm:mb-[10px] md:mx-[40px] sm:mx-[20px] text-black'>
               <div>
     <Link legacyBehavior href='/'>
                 <a>                
@@ -60,23 +60,22 @@ function Nav() {
                   </a>
               </Link>
               <Link legacyBehavior href='/account/register'>
-                  <a                   
+                  <a  onClick={logout}                 
                     className="text-black hover:border-[#3AA7E3] px-3 py-2  text-md font-medium"
                   >
-                    Register
+                    Logout
                   </a>
               </Link>              
+            {/* <NavLink legacyBehavior href="/users" className="nav-item nav-link">Users</NavLink> */}
         </div>
               </div>
                 </div>
                 
         
-            <div className="navbar-nav">
-                <NavLink legacyBehavior href="/" exact className="nav-item nav-link">Home</NavLink>
-                <NavLink legacyBehavior href="/users" className="nav-item nav-link">Users</NavLink>
-                <a onClick={logout} className="nav-item nav-link">Logout</a>
-                <p>About</p>
-            </div>
+            
+                
+                
+            
         </nav>
     );
 }

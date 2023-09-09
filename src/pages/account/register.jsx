@@ -42,7 +42,7 @@ function Register() {
     return (
         <Layout>
             <div className=''>
-                <div className='flex justify-between pt-6 md:mb-[80px] sm:mb-[10px] md:mx-[70px] sm:mx-[20px] text-black'>
+                <div className='flex justify-between pt-6 md:mb-[80px] sm:mb-[10px] md:mx-[40px] sm:mx-[20px] text-black'>
               <div>
     <Link legacyBehavior href='/'>
                 <a>                
