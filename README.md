@@ -1,1 +1,1 @@
-﻿# image-compressor algo
+﻿# image-compressor
