@@ -1,1 +1,1 @@
-﻿# image-compressor
+﻿# Eazy Image-compressor
