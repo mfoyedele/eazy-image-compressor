@@ -55,7 +55,7 @@ function App({ Component, pageProps }) {
     return (
         <>
             <Head>
-                <title>Image Compressor</title>
+                <title>Eazy Image Compressor</title>
                 
                 {/* eslint-disable-next-line @next/next/no-css-tags */}
                 <link legacyBehavior href="//netdna.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
