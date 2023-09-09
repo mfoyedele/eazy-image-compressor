@@ -92,7 +92,7 @@ const boldStyle = {
           
        <div> 
        <div>      
-      <h3 className='text-center'>Image Compressor</h3>
+      <h3 className='text-center text-[22px] font-bold text-[#2566EB]'>Eazy Image Compressor</h3>
       <div className='inputImage'>
       <input
         ref={inputRef}

@@ -59,6 +59,7 @@ function App({ Component, pageProps }) {
                 
                 {/* eslint-disable-next-line @next/next/no-css-tags */}
                 <link legacyBehavior href="//netdna.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+                <link legacyBehavior href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
             </Head>
 
             <div className={`app-container ${user ? 'bg-light' : ''}`}>
