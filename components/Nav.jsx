@@ -66,7 +66,7 @@ function Nav() {
                     Logout
                   </a>
               </Link>              
-            <NavLink legacyBehavior href="/users" className="nav-item nav-link">Users</NavLink>
+            {/* <NavLink legacyBehavior href="/users" className="nav-item nav-link">Users</NavLink> */}
         </div>
               </div>
                 </div>
