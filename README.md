@@ -41,3 +41,8 @@ Description: [Provide a concise summary of the change]
 Rationale: [Explain the necessity or benefits of this modification]
 
 Related Issues: [Include any associated issues or pull requests]
+
+## Related Projects
+1.  compressorjs by fengyuanchen
+https://github.com/fengyuanchen/compressorjs
+
