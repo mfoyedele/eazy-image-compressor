@@ -49,3 +49,8 @@ Related Issues: [Include any associated issues or pull requests]
 2.  browser-image-compression by Donaldcwl
     https://github.com/Donaldcwl/browser-image-compression
 
+## Authors
+Oyedele Musa Funso - [LinkedIn](https://www.linkedin.com/in/musa-funso-oyedele-14b262195/) / [Twitter](https://twitter.com/realfunso)
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
