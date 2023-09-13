@@ -32,3 +32,11 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Contribution Guidelines
+Pull requests are welcome. For significant changes, please adhere to the following guidelines:
+Description: [Provide a concise summary of the change]
+
+Rationale: [Explain the necessity or benefits of this modification]
+
+Related Issues: [Include any associated issues or pull requests]
