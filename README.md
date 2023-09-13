@@ -14,3 +14,14 @@ I've shared a blog post on Medium discussing the project. You can read it here: 
 ```
 git clone https://github.com/mfoyedele/eazy-image-compressor.git
 ```
+2. Install necessary dependencies
+   ```
+   npm install --legacy-peer-deps
+   ```
+2. Run the development server:
+   ```bash
+npm run dev
+# or
+yarn dev
+```
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
