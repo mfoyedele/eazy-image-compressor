@@ -44,5 +44,8 @@ Related Issues: [Include any associated issues or pull requests]
 
 ## Related Projects
 1.  compressorjs by fengyuanchen
-https://github.com/fengyuanchen/compressorjs
+    https://github.com/fengyuanchen/compressorjs
+
+2.  browser-image-compression by Donaldcwl
+    https://github.com/Donaldcwl/browser-image-compression
 
