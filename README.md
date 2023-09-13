@@ -9,16 +9,16 @@ Open http://funso-image-compressor.vercel.app/ with your browser to see the abov
 I've shared a blog post on Medium discussing the project. You can read it here: https://medium.com/@musaoyedele3/how-i-developed-an-image-compressor-using-javascript-6dd107e68ce0
 
 ## Installation
-1. Clone the repository
+1.   Clone the repository
 
 ```
 git clone https://github.com/mfoyedele/eazy-image-compressor.git
 ```
-2. Install necessary dependencies
-   ```
-   npm install --legacy-peer-deps
-   ```
-3. Run the development server:
+2.   Install necessary dependencies
+```
+npm install --legacy-peer-deps
+```
+3.   Run the development server:
 ```
 npm run dev
 ```
