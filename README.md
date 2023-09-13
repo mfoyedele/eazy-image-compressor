@@ -7,3 +7,10 @@ Eazy Image Compressor is crafted to efficiently reduce the file size of high-qua
 Open http://funso-image-compressor.vercel.app/ with your browser to see the above-deployed site.
 
 I've shared a blog post on Medium discussing the project. You can read it here: https://medium.com/@musaoyedele3/how-i-developed-an-image-compressor-using-javascript-6dd107e68ce0
+
+## Installation
+1. Clone the repository
+
+```
+git clone https://github.com/mfoyedele/eazy-image-compressor.git
+```
