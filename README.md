@@ -24,3 +24,9 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Usage
+Start the application on Visual Studio Code by following the below commands
+```
+cd eazy-image-compressor
+```
