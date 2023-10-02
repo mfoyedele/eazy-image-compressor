@@ -66,7 +66,7 @@ function Nav() {
                     Logout
                   </a>
               </Link>              
-            <NavLink legacyBehavior href="/users" className="nav-item nav-link text-md font-medium text-black hover:border-[#3AA7E3] px-3 py-2">Uses</NavLink>
+            <NavLink legacyBehavior href="/users" className="nav-item nav-link text-md font-medium text-black hover:border-[#3AA7E3] px-3 py-2">Users</NavLink>
         </div>
               </div>
                 </div>
